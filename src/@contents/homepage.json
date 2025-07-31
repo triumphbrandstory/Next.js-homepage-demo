@@ -6,5 +6,22 @@
       "description": "Extra 25% OFF, Limited Spots - start your journey today!",
       "icon": "🚀"
     }
+  },
+  "heroSection": {
+    "mainHeading": "Want to Turn Social Media Into a Profitable Career?",
+    "subHeading": "Discover your way to success with Fametonic:",
+    "features": [
+      "Start growing your influence right away—no waiting required!",
+      "Create viral TikToks and Reels step by step with easy-to-follow lessons",
+      "Use a Personal AI Worker to boost your content",
+      "Learn from expert-led courses designed for aspiring influencers"
+    ],
+    "cta": {
+      "text": "GET STARTED",
+      "subText": "1-minute quiz for personalized Insights"
+    },
+    "legalText": "By clicking 'Get Started', you agree with Terms and Conditions, Privacy Policy, Subscription Terms",
+    "copyright": "Fametonic {year} ©All Rights Reserved.",
+    "phoneImage": "hero-phone-mockup.png"
   }
 }

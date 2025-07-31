@@ -1,4 +1,5 @@
-import PromoBanner from "@/@components/common/layout/PromoBanner";
+import Navbar from "@/@components/common/Navbar";
+import PromoBanner from "@/@components/common/PromoBanner";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <PromoBanner />
+        <Navbar />
         <main id="main-content overflow-x-hidden" tabIndex={-1} className="focus:outline-none">
           {children}
         </main>

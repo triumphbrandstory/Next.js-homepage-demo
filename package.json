@@ -2,6 +2,10 @@
   "name": "homepage-tanjila",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "author": "Tanjila",
+    "license": "MIT"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
