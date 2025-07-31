@@ -27,7 +27,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main id="main-content overflow-x-hidden" tabIndex={-1} className="focus:outline-none">
+          {children}
+        </main>
       </body>
     </html>
   );
