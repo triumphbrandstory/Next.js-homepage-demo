@@ -19,7 +19,7 @@ const LayoutContainer = ({
       id={id}
     >
       <div
-        className={`w-[350px] md:w-[704px] lg:w-[960px] xl:w-[1200px] 2xl:w-[1220px] 3xl:w-[1440px] ${isMobileMenuOpen && "!w-full"
+        className={`w-[350px] md:w-[704px] lg:w-[980px] ${isMobileMenuOpen && "!w-full"
           }`}
       >
         {children}

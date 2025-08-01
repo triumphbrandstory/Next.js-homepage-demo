@@ -12,11 +12,11 @@ const HeroCTASection = ({ cta }: HeroCTASectionProps) => {
         <div className="space-y-3 max-w-md">
             <Button
                 size="lg"
-                className="w-full max-w-md text-xl font-bold tracking-wide"
+                className="w-full max-w-md text-xl font-bold tracking-wide !py-2"
             >
                 {cta.text} ›
             </Button>
-            <p className="text-cyan-400 text-sm md:text-base font-medium text-center">
+            <p className="text-white text-sm font-medium text-center">
                 {cta.subText}
             </p>
         </div>

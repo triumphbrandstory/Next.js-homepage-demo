@@ -6,13 +6,12 @@ const PromoBanner = () => {
 
     return (
         <div
-            className="w-full py-3 px-4 text-center text-white font-medium bg-promo-background"
+            className="w-full py-5 lg:py-2.5 px-4 text-center text-white font-medium bg-promo-background"
         >
-            <div className="flex items-center justify-center gap-2">
-                <span className="text-lg">{topBanner.icon}</span>
-                <span className="text-sm sm:text-base">
-                    <span className="font-bold text-cyan-200">{topBanner.title}:</span>
-                    <span className="ml-1">{topBanner.description}</span>
+            <div className="flex items-center justify-center gap-2 font-extrabold">
+                <span className="text-base lg:text-xl">
+                    <span className="text-cyan-200">{topBanner.title}:</span>
+                    <span className="ml-2">{topBanner.description}</span>
                 </span>
             </div>
         </div>

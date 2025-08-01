@@ -1,4 +1,5 @@
 'use client';
+import mobileLogo from '@/@assets/images/logo-mobile.svg';
 import logo from '@/@assets/images/logo.svg';
 import LayoutContainer from '@/@components/layout/LayoutContainer';
 import Image from 'next/image';
@@ -13,25 +14,40 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-[#0a0a0a] py-4 md:py-6">
+        <nav className="bg-dark-bg mt-4 lg:mt-9">
             <LayoutContainer className="!justify-between" isMobileMenuOpen={isMobileMenuOpen}>
                 <div className="flex items-start justify-between w-full">
                     {/* Logo */}
                     <div className="text-white font-bold text-xl md:text-2xl">
-                        <Image src={logo.src} alt="logo-image" className="w-[170px]" width={170} height={170} />
+                        {/* Desktop Logo */}
+                        <Image
+                            src={logo.src}
+                            alt="logo-image"
+                            className="hidden md:block w-[170px]"
+                            width={170}
+                            height={170}
+                        />
+                        {/* Mobile Logo */}
+                        <Image
+                            src={mobileLogo.src}
+                            alt="mobile-logo-image"
+                            className="md:hidden w-[120px] ml-[90%]"
+                            width={120}
+                            height={120}
+                        />
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center gap-10 text-[18px]">
                         <Link
                             href="#about"
-                            className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                            className="font-semibold text-light-gray hover:text-cyan-400"
                         >
                             About us
                         </Link>
                         <Link
                             href="#contact"
-                            className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                            className="font-semibold text-light-gray hover:text-cyan-400"
                         >
                             Contact
                         </Link>

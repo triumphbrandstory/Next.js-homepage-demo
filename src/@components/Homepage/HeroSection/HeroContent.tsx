@@ -19,7 +19,7 @@ interface HeroContentProps {
 
 const HeroContent = ({ heroSection }: HeroContentProps) => {
     return (
-        <div className="text-white space-y-6 md:space-y-8 order-2 lg:order-1 lg:w-1/2 lg:flex-shrink-0">
+        <div className="w-full text-white space-y-6 md:space-y-8">
             <HeroHeadings
                 mainHeading={heroSection.mainHeading}
                 subHeading={heroSection.subHeading}
