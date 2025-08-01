@@ -7,13 +7,15 @@
     "email": "tanjila.cse.diu@gmail.com",
     "website": "https://tanjila-shamima.web.app/",
     "github-repository": "https://github.com/TanjilaShamima/homepage-demo",
-    "live-url": ""
+    "live-url": "https://homepage-demo-tanjila-shamima.web.app/"
   },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "npm run build && npm run export && firebase deploy"
   },
   "dependencies": {
     "lucide-react": "^0.535.0",

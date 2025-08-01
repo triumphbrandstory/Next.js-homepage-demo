@@ -141,6 +141,7 @@ This project is private and proprietary. All rights reserved.
 - Email: tanjila.cse.diu@gmail.com
 - Website: https://tanjila-shamima.web.app/
 - GitHub: https://github.com/TanjilaShamima/homepage-demo
+- URL: https://homepage-demo-tanjila-shamima.web.app/
 
 ## 🤝 Contributing
 
