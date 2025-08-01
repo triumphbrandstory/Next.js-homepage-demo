@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "author": {
-    "author": "Tanjila",
-    "license": "MIT"
+    "name": "Tanjila Akter",
+    "email": "tanjila.cse.diu@gmail.com",
+    "website": "https://tanjila-shamima.web.app/",
+    "github-repository": "https://github.com/TanjilaShamima/homepage-demo",
+    "live-url": ""
   },
   "scripts": {
     "dev": "next dev --turbopack",
