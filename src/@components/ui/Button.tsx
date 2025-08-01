@@ -24,7 +24,7 @@ const Button = ({
     const baseClasses = 'font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 justify-center';
 
     const variantClasses = {
-        primary: 'bg-[#FC004E] text-white hover:bg-[#E91E63] focus:ring-pink-500',
+        primary: 'bg-[#FC004E] text-white hover:bg-[#E91E63] focus:ring-pink-500 shadow-custom',
         secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
         outline: 'border-2 border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500'
     };
@@ -35,15 +35,10 @@ const Button = ({
         lg: 'px-8 py-4 text-lg'
     };
 
-    const customStyle = variant === 'primary' ? {
-        boxShadow: '2px 2px 10px 0px #00E7F9'
-    } : {};
-
     return (
         <button
             type={type}
             className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
-            style={customStyle}
             onClick={onClick}
             disabled={disabled}
         >
