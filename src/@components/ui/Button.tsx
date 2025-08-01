@@ -43,7 +43,7 @@ const Button = ({
             disabled={disabled}
         >
             {children}
-            {Icon && <Icon />}
+            {Icon && <Icon className='w-5 h-5' />}
         </button>
     );
 };

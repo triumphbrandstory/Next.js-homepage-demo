@@ -14,8 +14,9 @@ const HeroCTASection = ({ cta }: HeroCTASectionProps) => {
             <Button
                 size="lg"
                 className="w-full max-w-md text-xl font-bold tracking-wide !py-2"
+                icon={ChevronRight}
             >
-                {cta.text} <ChevronRight />
+                {cta.text}
             </Button>
             <p className="text-white text-sm font-medium text-center">
                 {cta.subText}
