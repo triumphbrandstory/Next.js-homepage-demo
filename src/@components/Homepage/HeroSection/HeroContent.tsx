@@ -27,12 +27,16 @@ const HeroContent = ({ heroSection }: HeroContentProps) => {
 
             <HeroFeaturesList features={heroSection.features} />
 
-            <HeroCTASection cta={heroSection.cta} />
+            <div className='flex flex-col'>
+                <HeroCTASection cta={heroSection.cta} />
+                
+                <HeroLegalText
+                    legalText={heroSection.legalText}
+                    copyright={heroSection.copyright}
+                />
+            </div>
 
-            <HeroLegalText
-                legalText={heroSection.legalText}
-                copyright={heroSection.copyright}
-            />
+
         </div>
     );
 };

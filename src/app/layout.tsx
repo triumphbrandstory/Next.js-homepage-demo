@@ -1,7 +1,7 @@
 import Navbar from "@/@components/common/Navbar";
 import PromoBanner from "@/@components/common/PromoBanner";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Figtree } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +11,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const geistFigtree = Geist_Mono({
+  variable: "--font-geist-figtree",
   subsets: ["latin"],
 });
 
@@ -27,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistFigtree.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <PromoBanner />
         <Navbar />
