@@ -10,9 +10,8 @@ const HeroSection = () => {
     return (
         <section className="relative bg-dark-bg py-12 lg:py-14 overflow-hidden">
             <LayoutContainer>
-                {/* Add relative here to allow z-index to work properly */}
                 <div className="relative flex flex-col">
-                    <div className='w-full lg:w-[525px] z-100 relative order-2 lg:order-1'>
+                    <div className='w-full lg:w-[525px] z-40 relative order-2 lg:order-1'>
                         <HeroContent heroSection={heroSection} />
                     </div>
                     <div className='lg:absolute -right-30 top-0 order-1 lg:order-2'>

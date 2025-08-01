@@ -4,7 +4,7 @@ import logo from '@/@assets/images/logo.svg';
 import LayoutContainer from '@/@components/layout/LayoutContainer';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,8 +13,21 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMobileMenuOpen]);
+
     return (
-        <nav className="bg-dark-bg mt-4 lg:mt-9">
+        <nav className="bg-dark-bg mt-4 lg:mt-9 relative z-50">
             <LayoutContainer className="!justify-between" isMobileMenuOpen={isMobileMenuOpen}>
                 <div className="flex items-start justify-between w-full">
                     {/* Logo */}
@@ -41,13 +54,13 @@ const Navbar = () => {
                     <div className="hidden md:flex items-center gap-10 text-[18px]">
                         <Link
                             href="#about"
-                            className="font-semibold text-light-gray hover:text-cyan-400"
+                            className="font-semibold text-light-gray hover:text-cyan-400 transition-colors duration-300"
                         >
                             About us
                         </Link>
                         <Link
                             href="#contact"
-                            className="font-semibold text-light-gray hover:text-cyan-400"
+                            className="font-semibold text-light-gray hover:text-cyan-400 transition-colors duration-300"
                         >
                             Contact
                         </Link>
@@ -55,7 +68,7 @@ const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden text-white focus:outline-none"
+                        className="md:hidden text-white focus:outline-none p-2 rounded-lg hover:bg-gray-800 transition-colors duration-200"
                         onClick={toggleMobileMenu}
                         aria-label="Toggle mobile menu"
                     >
@@ -74,24 +87,52 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                {/* Mobile Menu */}
+                {/* Mobile Menu Full Screen */}
                 {isMobileMenuOpen && (
-                    <div className="md:hidden mt-4 pb-4 border-t border-gray-700">
-                        <div className="flex flex-col space-y-4 pt-4">
-                            <a
-                                href="#about"
-                                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                                onClick={() => setIsMobileMenuOpen(false)}
+                    <div className="md:hidden fixed inset-0 bg-dark-bg z-40">
+                        {/* Header with Logo and Close Button */}
+                        <div className="flex items-center justify-between p-6 border-b border-gray-700">
+                            <Image
+                                src={mobileLogo.src}
+                                alt="mobile-logo-image"
+                                className="w-[120px]"
+                                width={120}
+                                height={120}
+                            />
+                            <button
+                                className="text-white focus:outline-none p-2 rounded-lg hover:bg-gray-800 transition-colors duration-200"
+                                onClick={toggleMobileMenu}
+                                aria-label="Close mobile menu"
                             >
-                                About us
-                            </a>
-                            <a
-                                href="#contact"
-                                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                Contact
-                            </a>
+                                <svg
+                                    className="w-6 h-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        {/* Menu Items */}
+                        <div className="flex flex-col items-center justify-center h-full -mt-20">
+                            <div className="flex flex-col space-y-8 text-center">
+                                <a
+                                    href="#about"
+                                    className="text-white hover:text-cyan-400 transition-colors duration-300 font-medium text-2xl"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    About us
+                                </a>
+                                <a
+                                    href="#contact"
+                                    className="text-white hover:text-cyan-400 transition-colors duration-300 font-medium text-2xl"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    Contact
+                                </a>
+                            </div>
                         </div>
                     </div>
                 )}

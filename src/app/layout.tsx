@@ -14,14 +14,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const geistFigtree = Geist_Mono({
+const geistFigtree = Figtree({
   variable: "--font-geist-figtree",
   subsets: ["latin"],
 });
 
+// Improve metadata
 export const metadata: Metadata = {
-  title: "Homepage - Fametonic",
-  description: "Homepage - Fametonic",
+  title: "Fametonic - Turn Social Media Into a Profitable Career",
+  description: "Fametonic - Turn Social Media Into a Profitable Career",
+  keywords: ["social media", "influencer", "career", "TikTok", "content creation"],
+  openGraph: {
+    title: "Fametonic - Turn Social Media Into a Profitable Career",
+    description: "Start growing your influence right away with expert-led courses",
+    type: "website",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
