@@ -10,7 +10,7 @@ const PromoBanner = () => {
         >
             <div className="flex items-center justify-center gap-2 font-extrabold">
                 <span className="text-base lg:text-xl">
-                    <span className="text-cyan-200">{topBanner.title}:</span>
+                    <span className="text-dark-cyan">{topBanner.title}:</span>
                     <span className="ml-2">{topBanner.description}</span>
                 </span>
             </div>

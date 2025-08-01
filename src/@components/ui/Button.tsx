@@ -8,6 +8,7 @@ interface ButtonProps {
     onClick?: () => void;
     disabled?: boolean;
     type?: 'button' | 'submit' | 'reset';
+    icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
 const Button = ({
@@ -17,9 +18,10 @@ const Button = ({
     className = '',
     onClick,
     disabled = false,
-    type = 'button'
+    type = 'button',
+    icon : Icon
 }: ButtonProps) => {
-    const baseClasses = 'font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+    const baseClasses = 'font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 justify-center';
 
     const variantClasses = {
         primary: 'bg-[#FC004E] text-white hover:bg-[#E91E63] focus:ring-pink-500',
@@ -46,6 +48,7 @@ const Button = ({
             disabled={disabled}
         >
             {children}
+            {Icon && <Icon />}
         </button>
     );
 };
