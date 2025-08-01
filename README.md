@@ -106,11 +106,16 @@ The project follows a modular component architecture:
 
 ## 📱 Responsive Design
 
-The homepage is fully responsive and optimized for:
+The homepage is fully responsive and optimized for multiple breakpoints:
 
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (320px - 767px)
+- **Mobile**: 375px - 767px
+- **Tablet**: 768px - 1023px
+- **Desktop Small**: 1024px - 1279px
+- **Desktop Medium**: 1280px - 1439px
+- **Desktop Large**: 1440px - 1919px
+- **Desktop Extra Large**: 1920px+
+
+The design adapts seamlessly across all device sizes, ensuring optimal user experience on smartphones, tablets, and desktop computers.
 
 ## 🔧 Development
 
