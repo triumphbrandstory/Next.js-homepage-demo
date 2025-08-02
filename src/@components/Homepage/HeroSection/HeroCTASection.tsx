@@ -10,7 +10,7 @@ interface HeroCTASectionProps {
 
 const HeroCTASection = ({ cta }: HeroCTASectionProps) => {
     return (
-        <div className="space-y-3 max-w-md order-2 lg:order-1 lg:mb-8">
+        <div className="w-full space-y-3 max-w-md order-2 lg:order-1 lg:mb-8">
             <Button
                 size="lg"
                 className="w-full max-w-md text-xl font-bold tracking-wide !py-2"
