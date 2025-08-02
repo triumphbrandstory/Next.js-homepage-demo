@@ -11,7 +11,7 @@ const HeroLegalText = ({ legalText, copyright }: HeroLegalTextProps) => {
             <p className="text-center lg:text-left leading-5">
                 {legalText}
             </p>
-            <p className="text-gray-500 text-center lg:text-left">
+            <p className="text-center lg:text-left">
                 {copyright.replace('{year}', currentYear)}
             </p>
         </div>
