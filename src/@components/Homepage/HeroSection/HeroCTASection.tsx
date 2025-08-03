@@ -18,7 +18,7 @@ const HeroCTASection = ({ cta }: HeroCTASectionProps) => {
             >
                 {cta.text}
             </Button>
-            <p className="text-white text-sm font-medium text-center mt-5 md:mt-3">
+            <p className="text-white text-sm font-medium text-center">
                 {cta.subText}
             </p>
         </div>
